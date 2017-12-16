@@ -24,6 +24,7 @@ set(EXEC_SRCS dev_table.c
 	          utils.c)
 
 add_executable(stm32flash ${PARSER_SRCS} ${EXEC_SRCS})
+install(TARGETS stm32flash RUNTIME DESTINATION bin)
 
 ### Debian Package generation
 set(CPACK_GENERATOR "DEB")
